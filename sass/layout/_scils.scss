@@ -1,0 +1,40 @@
+.scils {
+    @media screen and (min-width: 1200px) {
+            padding-bottom: 94px;;
+        }
+}
+
+.scils__img {
+    display: none;
+    width: 370px;
+    height: 294px;
+    padding: 0;
+    margin: 0;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        }
+}
+
+.scils__item {
+    position: relative;
+    &+& {
+    margin-left: 30px;
+    }   
+}
+.scils__overlay {
+    @extend %align-items;
+    position: absolute;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--about-overlay-color);
+}
+
+.scils__title {
+@media screen and (max-width: 1200px) {
+    display: none;
+
+    }
+}

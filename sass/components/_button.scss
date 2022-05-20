@@ -1,0 +1,99 @@
+.button {
+    color: var(--main-color);
+    background-color: var(--accent-color);
+    display: inline-block;
+    vertical-align: top;
+    font-family: inherit;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+
+.hero__btn {
+    min-width: 200px;
+    height: 50px;
+    padding: 10px 32px;
+    @include font (16px, 700, 1.9, 0.03em);
+
+    transition-property: color, background-color, box-shadow;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+    &:hover,
+    &:focus {
+        background-color: var(--button-color);
+        box-shadow: var(--hero-shadow);
+    }
+}
+/* FOOTER BLOCK BUTTON */
+.button__subcribe {
+    display: flex;
+    margin-left: auto;
+    width: 200px;
+    height: 50px;
+    @extend %align-items;
+    @include font (16px, 700, 1.88, 0.06em);
+    text-align: center;
+    padding: 10px 28px 10px 29px;
+    transition-property: background-color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+    
+    /*@media screen and (min-width: 1200px) {
+    display: flex;
+    }*/
+    &:hover,
+    &:focus {
+        background: var(--button-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.button__text {
+    line-height: 30px;
+}
+
+.button__icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--main-color);
+    background-size: contain;
+}
+
+.button__text+.button__icon {
+    margin-left: 10px;
+}
+// Form button
+.form__button {
+    display: flex;
+    margin: auto;
+    @include font (16px, 700, 1.9, 0.06em);
+    padding: 10px 55px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    &:hover,
+    &:focus {
+        background-color: var(--button-color);
+        box-shadow: var(--hero-shadow);
+    }
+}
+
+
+.filter__button {
+    padding: 6px 22px;
+    background-color: var(--team-fond-color);
+    color: var(--primary-text-color);
+    @include font (16px, 500, 1.6, 0.03em);
+    
+    transition-property: color, background-color, box-shadow;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--button-color);
+        color: var(--main-color);
+        box-shadow: var(--button-shadow);
+        /* 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);*/
+    }
+}

@@ -1,0 +1,71 @@
+.advantages__page {
+    padding: 60px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advantage__list {
+    //display: flex;
+    @media screen and (min-width: 768px) {
+            @include flex-list;
+        }
+    padding-left: 0;
+    margin: 0;
+    border-radius: 4px;
+}
+
+.advantage__item {
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+        @include flex-item (calc(100% / 2 - var(--set-gap)));
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include flex-item;
+    }
+    //&:not(:last-child) {
+    //margin-bottom: 30px;
+    //}
+    &::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-color: var(--team-fond-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    }
+}
+.advantage__item.astronaut {
+    margin-bottom: 0;
+}
+.antenna::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.clock::before {
+    background-image: url(../images/clock.svg);
+}
+
+.diagram::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.astronaut::before {
+    background-image: url(../images/astronaut.svg);
+}
+
+.advantage__subtitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+    @include font (14px, 700, 1.14, 0.03em);
+    text-align: center;
+    color: var(--primary-text-color);
+    text-transform: uppercase;
+    @media screen and (min-width: 780px) {
+            text-align: left;
+        }
+    
+}
+

@@ -1,0 +1,31 @@
+.icon__list {
+    @extend %align-items;
+    justify-content: center;
+}
+
+.icon__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.icon__link {
+    @extend %align-items;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--icon-color);
+
+    transition-property: color, background-color;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+    &:hover,
+    &:focus {
+        color: var(--main-color);
+        background-color: var(--accent-color);
+        border-radius: 50%;
+    }
+}
+
+.icon__social {
+    fill: currentColor;
+}

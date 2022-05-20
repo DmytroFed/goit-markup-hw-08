@@ -1,0 +1,31 @@
+.title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--primary-text-color);
+
+    text-align: center;
+
+@media screen and (max-width: 1199px) {
+        @include font (28px, 700, 1.17, 0.03em);
+        margin-bottom: var(--set-gap);
+        text-align: center;
+    }
+    
+     @media screen and (min-width: 1200px) {
+        @include font (36px, 700, 1.17, 0.03em);
+         margin-bottom: 50px;
+        text-align: center;
+    }
+}
+.form__title {
+    display: block;
+    margin-bottom: 12px;
+    @include font (20px, 700, 1.15, 0.03em);
+
+    text-align: center;
+    color: var(--primary-text-color);
+
+}
+.clients__title {
+    margin-bottom: 30px;
+}

@@ -1,0 +1,6 @@
+.filter__button.current {
+    color: var(--main-color);
+    font-family: inherit;
+@include font (16px, 500, 1.6, 0.03em);
+    background-color: var(--button-color);
+}
