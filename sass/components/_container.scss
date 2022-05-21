@@ -17,3 +17,18 @@
             width: 1200px;
         }
 }
+.container--flex {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-right: 89px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-right: 0;
+    }
+}

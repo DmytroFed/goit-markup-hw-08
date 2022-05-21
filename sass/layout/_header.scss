@@ -11,8 +11,11 @@
 }
 
 .nav__list {
-    display: flex;
+    display: none;
     text-decoration: none;
+    @media screen and (min-width: 768px) {
+            display: flex;
+    }
 }
 
 .nav__item+.nav__item {
@@ -53,8 +56,14 @@
 }
 
 .contacts-header {
-    display: flex;
-    margin-left: auto;
+    display: none;
+    //margin-left: auto;
+    /*@media screen and (min-width: 768px) {
+            display: block;
+        }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }*/
 }
 
 .contacts-header__item+.contacts-header__item {

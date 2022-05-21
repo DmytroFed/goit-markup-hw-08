@@ -28,6 +28,7 @@
 .button__subcribe {
     display: flex;
     margin-left: auto;
+    margin-right: auto;
     width: 200px;
     height: 50px;
     @extend %align-items;
@@ -38,9 +39,9 @@
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
     
-    /*@media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1200px) {
     display: flex;
-    }*/
+    }
     &:hover,
     &:focus {
         background: var(--button-color);

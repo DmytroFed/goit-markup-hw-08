@@ -3,26 +3,64 @@
     background-color: var(--fond-color);
     padding: 60px 0 60px 0;
     text-align: center;
+@media screen and (min-width: 480px) {
+        text-align: center;
+    }
+@media screen and (min-width: 768px) {
+        display: block;
+        text-align: left;
+    }
     @media screen and (min-width: 1200px) {
         display: block;
         text-align: left;
-    } 
-
+        margin-right: 0;
+    }
+    
+        
 & .container {
         //display: flex;
         //align-items: baseline;
-        @media screen and (min-width: 480px) {
+    @media screen and (min-width: 480px) {
+            display: block;
+            align-items: baseline;
+            }
+    @media screen and (min-width: 768px) {
+        display: block;
+        align-items: baseline;
+    }
+    @media screen and (min-width: 1200px) {
         display: flex;
         align-items: baseline;
     }
 }
 }
+
+.footer__top {
+    //display: block;
+    @media screen and (min-width: 480px) {
+            text-align: center;
+        }
+        @media screen and (min-width: 1200px) {
+        flex-basis: 50%;
+        margin-bottom: 60px;
+        //width: 100%;
+        text-align: left;
+        }
+}
+
+
+
 .address__box {
     //width: 231px;
     margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+            margin-left: 76px;
+        }
+    
     @media screen and (min-width: 1200px) {
     width: 231px;
     margin-bottom: 0;
+    margin-left: 0;
     }
 }
 
@@ -74,8 +112,6 @@
    }
 }
 
-
-
 .footer-icon__list {
     display: flex;
     justify-content: center;
@@ -114,8 +150,15 @@
 /* Footer-block */
 .subcribe {
     margin: 0;
-    //margin-left:auto;
     margin-right: auto;
+    @media screen and (min-width: 480px) {
+            flex-basis: 100%;
+            align-content:center;
+        }
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+    }
+
     @media screen and (min-width: 1200px) {
         text-align: left;
         margin-left: 93px;
@@ -144,11 +187,18 @@
     height: 50px;
     margin: 0 0 20px 0;
     padding: 0 0 0 16px;
+   @media screen and (min-width: 480px) {
+        width: 450px;
+        margin-right: auto;
+        margin-left: auto;
+   }
+
 
     @media screen and (min-width: 1200px) {
-        display: flex;
+        display: block;
         width: 358px;
-        margin-right: 12px;
+        margin: 0 12px 0 0;
+        align-content:center;
     }
 
     color: var(--main-color);
@@ -175,7 +225,10 @@
     @include font (16px, 400, 1.25, 0.03em);
             color: var(--contacts-color);
         }
+        @media screen and (min-width: 480px) {
+            display: block;
 
+        }
     @media screen and (min-width: 1200px) {
             display: flex;
             align-items: flex-end;
