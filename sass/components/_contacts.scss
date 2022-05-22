@@ -2,26 +2,30 @@
 
 .contacts-header__link {
     @extend %align-items;
-    justify-content: center;
     text-decoration: none;
     color: var(--secondary-text-color);
     @include font (14px, 500, 1.14, 0.03em);
-
-    transition-property: color;
+@media screen and (min-width: 768px) {
+        justify-content: center;
+    }
+        transition-property: color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 
     &--env,
     &--tel {
         @extend %align-items;
-        justify-content: center;
         color: var(--secondary-text-color);
+        
     }
 
     &--env:hover,
     &--tel:hover {
         color: var(--accent-color);
     }
+}
+.contacts-header__link--env {
+    margin-bottom: 10px;
 }
 
 
