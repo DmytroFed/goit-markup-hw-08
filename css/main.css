@@ -454,6 +454,34 @@ a {
   letter-spacing: 0.03em;
 }
 
+.subcribe__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 450px;
+  margin-right: 0;
+  height: 50px;
+  padding: 0 0 0 16px;
+  color: var(--main-color);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  -webkit-transition: border cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .subcribe__text {
+    max-width: 358px;
+    margin-right: 12px;
+  }
+}
+.subcribe__text:focus, .subcribe__text:hover, .subcribe__text:focus-within {
+  border: 1px solid var(--accent-color);
+  outline: 1px solid var(--accent-color);
+}
+
 .footer__text {
   font-size: 14px;
   font-weight: 700;
@@ -845,6 +873,12 @@ a {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .nav {
+    max-width: 480px;
+  }
+}
+
 .nav__list {
   display: none;
   text-decoration: none;
@@ -1107,6 +1141,10 @@ a {
   color: var(--accent-color);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .hero {
   min-width: 480px;
   max-width: 1600px;
@@ -1319,11 +1357,6 @@ a {
   padding-bottom: 60px;
   background-color: var(--team-fond-color);
 }
-@media screen and (min-width: 1200px) {
-  .team {
-    padding-top: 94px;
-  }
-}
 
 .team__list {
   display: block;
@@ -1350,26 +1383,6 @@ a {
   background-color: var(--main-color);
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
-  /*@media screen and (max-width: 479px) {
-          max-width: 450px;
-          margin-right: auto;
-          margin-left: auto;
-
-          &:not(:last-child) {
-              margin-bottom: 30px;
-          }
-      }
-
-      @media screen and (min-width: 480px) {
-          flex-basis: calc((100% - 4 * 15px)/2);
-          max-width: 354px;
-          margin: 15px;
-      }
-
-      @media screen and (min-width: 768px) {
-          flex-basis: calc((100% - 8 * 15px)/4);
-          max-width: 270px;
-      }  */
 }
 @media screen and (min-width: 768px) {
   .team__item {
@@ -1817,8 +1830,8 @@ a {
 }
 
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .filter {
@@ -1829,14 +1842,24 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 750px) {
+  .filter__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .filter__item + .filter__item {
-  margin-left: 8px;
+  margin-bottom: 15px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
 }
 
 /* Фильтр портфолио */
@@ -1861,12 +1884,33 @@ a {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 480px) {
+  .works__cards-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 780px) {
+  .works__cards-list {
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .works__cards-list {
+    padding-top: 50px;
+    padding-bottom: 94px;
+  }
 }
 
 .works__item {
   display: list-item;
   position: relative;
-  width: 370px;
+  width: 450px;
+  height: 100%;
   margin: 15px;
   border-top: 0;
   /* АЛЬТЕРНАТИВА */
@@ -1879,6 +1923,23 @@ a {
           box-shadow: var(--portfolio-shadow);
   /*box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);*/
+}
+@media screen and (min-width: 768px) {
+  .works__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .works__item {
+    -ms-flex-preferred-size: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 90px) / 3);
+  }
+}
+@media screen and (max-width: 767px) {
+  .works__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .works__link {

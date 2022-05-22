@@ -20,28 +20,74 @@
 <body>
     <!--Header-->
     <header class="header">
-                <div class="container main-nav">
-                    <nav class="nav">
-                        <a class="nav__logo logo" href="./index.html">Web<span class="nav__logo--blue">Studio</span></a>
-                        <ul class="nav__list list">
-                            <li class="nav__item"><a class="nav__link" href="./index.html">Студия</a></li>
-                            <li class="nav__item"><a class="nav__link current" href="./portfolio.html">Портфолио</a></li>
-                            <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
-                        </ul>
-                    </nav>
-                    <ul class="contacts-header list">
-                        <li class="contacts-header__item"><a class="contacts-header__link--env" href="mailto:info@devstudio.com">
-                                <svg class="contacts-header__icon" width="16" height="12">
-                                    <use href="./images/symbol-defs.svg#header-icon1"></use>
-                                </svg>info@devstudio.com</a>
+        <div class="main-nav container">
+            <nav class="nav">
+                <a class="nav__logo logo" href="./index.html">Web<span class="nav__logo--blue">Studio</span></a>
+                <button type="button" class="menu-open__btn">
+                    <svg class="icon__menu" width="40" height="40">
+                        <use href="./images/symbol-defs.svg#menu_40px"></use>
+                    </svg>
+                </button>
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="./index.html">Студия</a></li>
+                    <li class="nav__item"><a class="nav__link current" href="./portfolio.html">Портфолио</a></li>
+                    <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+                </ul>
+            </nav>
+            <ul class="contacts-header list">
+                <li class="contacts-header__item"><a class="contacts-header__link--env" href="mailto:info@devstudio.com">
+                        <svg class="contacts-header__icon" width="16" height="12">
+                            <use href="./images/symbol-defs.svg#header-icon1"></use>
+                        </svg>info@devstudio.com</a>
+                </li>
+                <li class="contacts-header__item"><a class="contacts-header__link--tel" href="tel:+380961111111">
+                        <svg class="contacts-header__icon" width="10" height="16">
+                            <use href="./images/symbol-defs.svg#header-icon2"></use>
+                        </svg>+38 096 111 11 11</a>
+                </li>
+            </ul>
+        </div>
+        <!--MOBILE-MENU -->
+        <div class="mobile-menu is-hidden">
+            <div class="mobile-menu__container">
+                <div class="mobile-menu__top">
+                    <button type="button" class="menu-close__btn">
+                        <svg class="icon__menu--close" width="40" height="40">
+                            <use href="./images/symbol-defs.svg#close_40px"></use>
+                        </svg>
+                    </button>
+                    <ul class="mob-nav__list">
+                        <li class="mob-nav__item"><a class="mob-nav__link current" href="./index.html">Студия</a></li>
+                        <li class="mob-nav__item"><a class="mob-nav__link" href="./portfolio.html">Портфолио</a></li>
+                        <li class="mob-nav__item"><a class="mob-nav__link" href="">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-menu__bottom">
+                    <ul class="mob-contacts list">
+                        <li class="mob-contacts__item"><a class="mob-contacts__link--tel" href="tel:+380961111111">
+                                +38 096 111 11 11</a>
                         </li>
-                        <li class="contacts-header__item"><a class="contacts-header__link--tel" href="tel:+380961111111">
-                                <svg class="contacts-header__icon" width="10" height="16">
-                                    <use href="./images/symbol-defs.svg#header-icon2"></use>
-                                </svg>+38 096 111 11 11</a>
+                        <li class="mob-contacts__item"><a class="mob-contacts__link--env" href="mailto:info@devstudio.com">
+                                info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mob-social">
+                        <li class="mob-social__item">
+                            <a href="" class="mob-social__link">Instagram</a>
+                        </li>
+                        <li class="mob-social__item">
+                            <a href="" class="mob-social__link">Twitter</a>
+                        </li>
+                        <li class="mob-social__item">
+                            <a href="" class="mob-social__link">facebook</a>
+                        </li>
+                        <li class="mob-social__item">
+                            <a href="" class="mob-social__link">LinkedIn</a>
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
     </header>
     <main>
         <!--Наши работы=================-->
@@ -63,7 +109,23 @@
                         <li class="works__item">
                             <a href="" class="works__link">
                                 <div class="thumb__card">
-                                    <img class="thumb__images" src="./images/img01.jpg" alt="Ноутбук" width="370" height="294">
+                                <picture class="team-member__img">
+                                    <source srcset="./images/our-projects/prj-techno-crack_450x294@1x.jpg 450w,
+                                                                  ./images/our-projects/prj-techno-crack_450x294@2x.jpg 900w"
+                                        sizes="(max-width: 767px) 450px, 100vw" media="(max-width: 767px)">
+                                
+                                    <source srcset="./images/our-projects/prj-techno-crack_354x294@1x.jpg 350w,
+                                                                ./images/our-projects/prj-techno-crack_354x294@2x.jpg 700w"
+                                        sizes="(max-width: 1199px) 354px, 50vw" media="(max-width: 1199px)">
+                                
+                                    <source srcset="./images/our-projects/prj-techno-crack_370x294@1x.jpg 370w,
+                                                                ./images/our-projects/prj-techno-crack_370x294@2x.jpg 740w"
+                                        sizes="(min-width: 1200px) 370px, 25vw" media="(min-width: 1200px)">
+                                
+                                    <img src="./images/our-projects/prj-techno-crack_370x294.jpg" alt="Страница сайта Технокряк"
+                                        class="project-image" />
+                                </picture>
+                                                   
                                 <div class="thumb__box">
                                     <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить
@@ -79,8 +141,23 @@
                         <li class="works__item">
                             <a href="" class="works__link">
                                 <div class="thumb__card">
-                                <img class="thumb__images" src="./images/img02.jpg" alt="Баскетболисты" width="370"
-                                    height="294">
+                            <picture class="team-member__img">
+                                 <source srcset="./images/our-projects/prj-basketball-poster_450x294@1x.jpg 450w,
+                                                              ./images/our-projects/prj-basketball-poster_450x294@2x.jpg 900w"
+                                    sizes="(max-width: 767px) 450px, 100vw" media="(max-width: 767px)">
+                            
+                                <source srcset="./images/our-projects/prj-basketball-poster_354x294@1x.jpg 350w,
+                                                            ./images/our-projects/prj-basketball-poster_354x294@2x.jpg 700w"
+                                    sizes="(max-width: 1199px) 354px, 50vw" media="(max-width: 1199px)">
+                            
+                                <source srcset="./images/our-projects/prj-basketball-poster_370x294@1x.jpg 370w,
+                                                              ./images/our-projects/prj-basketball-poster_370x294@2x.jpg 740w"
+                                    sizes="(min-width: 1200px) 370px, 25vw" media="(min-width: 1200px)">
+                            
+                                <img src="./images/our-projects/prj-basketball-poster_370x294.jpg" alt="Постер баскетбольного матча"
+                                    class="project-image" />
+                            </picture>
+
                                     <div class="thumb__box">
                                     <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                     позволит посетителю получить
@@ -96,8 +173,25 @@
                         <li class="works__item">
                             <a href="" class="works__link">
                                 <div class="thumb__card">
-                                <img class="thumb__images" src="./images/img03.jpg" alt="Банер ресторана" width="370"
-                                    height="294">
+
+                                    <picture class="team-member__img">
+                                    
+                                        <source srcset="./images/our-projects/prj-seafood-restaurant_450x294@1x.jpg 450w,
+                                                                      ./images/our-projects/prj-seafood-restaurant_450x294@2x.jpg 900w"
+                                            sizes="(max-width: 767px) 450px, 100vw" media="(max-width: 767px)">
+                                    
+                                        <source srcset="./images/our-projects/prj-seafood-restaurant_354x294@1x.jpg 350w,
+                                                                    ./images/our-projects/prj-seafood-restaurant_354x294@2x.jpg 700w"
+                                            sizes="(max-width: 1199px) 354px, 50vw" media="(max-width: 1199px)">
+                                    
+                                        <source srcset="./images/our-projects/prj-seafood-restaurant_370x294@1x.jpg 370w,
+                                                                      ./images/our-projects/prj-seafood-restaurant_370x294@2x.jpg 740w"
+                                            sizes="(min-width: 1200px) 370px, 25vw" media="(min-width: 1200px)">
+                                    
+                                        <img src="./images/our-projects/prj-seafood-restaurant_370x294.jpg" alt="Логотип ресторана Seafood"
+                                            class="project-image" />
+                                    </picture>
+
                                     <div class="thumb__box">
                                         <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                             позволит посетителю получить
@@ -113,7 +207,25 @@
                         <li class="works__item">
                             <a href="" class="works__link">
                                 <div class="thumb__card">
-                                <img class="thumb__images" src="./images/img04.jpg" alt="Наушники" width="370" height="294">
+
+                                    <picture class="team-member__img">
+                                    
+                                        <source srcset="./images/our-projects/prj-headphones-prime_450x294@1x.jpg 450w,
+                                                                      ./images/our-projects/prj-headphones-prime_450x294@2x.jpg 900w"
+                                            sizes="(max-width: 767px) 450px, 100vw" media="(max-width: 767px)">
+                                    
+                                        <source srcset="./images/our-projects/prj-headphones-prime_354x294@1x.jpg 350w,
+                                                                    ./images/our-projects/prj-headphones-prime_354x294@2x.jpg 700w"
+                                            sizes="(max-width: 1199px) 354px, 50vw" media="(max-width: 1199px)">
+                                    
+                                        <source srcset="./images/our-projects/prj-headphones-prime_370x294@1x.jpg 370w,
+                                                                      ./images/our-projects/prj-headphones-prime_370x294@2x.jpg 740w"
+                                            sizes="(min-width: 1200px) 370px, 25vw" media="(min-width: 1200px)">
+
+                                    <img src="./images/our-projects/prj-headphones-prime_370x294.jpg" alt="Наушники Prime" class="project-image" />
+                                    </picture>
+                                      
+
                                 <div class="thumb__box">
                                     <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить
@@ -129,7 +241,25 @@
                         <li class="works__item">
                             <a href="" class="works__link">
                                 <div class="thumb__card card-thumb">
-                                <img class="thumb__images" src="./images/img05.jpg" alt="Два бокса" width="370" height="294">
+
+                                    <picture class="team-member__img">
+                                    
+                                        <source srcset="./images/our-projects/prj-boxes_450x294@1x.jpg 450w,
+                                                                      ./images/our-projects/prj-boxes_450x294@2x.jpg 900w"
+                                            sizes="(max-width: 767px) 450px, 100vw" media="(max-width: 767px)">
+                                    
+                                        <source srcset="./images/our-projects/prj-boxes_354x294@1x.jpg 350w,
+                                                                    ./images/our-projects/prj-boxes_354x294@2x.jpg 700w"
+                                            sizes="(max-width: 1199px) 354px, 50vw" media="(max-width: 1199px)">
+                                    
+                                        <source srcset="./images/our-projects/prj-boxes_370x294@1x.jpg 370w,
+                                                                      ./images/our-projects/prj-boxes_370x294@2x.jpg 740w"
+                                            sizes="(min-width: 1200px) 370px, 25vw" media="(min-width: 1200px)">
+                                    
+                                        <img src="./images/our-projects/prj-boxes_370x294.jpg" alt="Две красивые упаковки" class="project-image" />
+                                    </picture>
+
+                                <!-- <img class="thumb__images" src="./images/img05.jpg" alt="Два бокса" width="370" height="294"> -->
                                 <div class="thumb__box">
                                     <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить
@@ -145,7 +275,25 @@
                         <li class="works__item">
                             <a href="" class="works__link">
                                 <div class="thumb__card">
-                                <img class="thumb__images" src="./images/img06.jpg" alt="Монитор" width="370" height="294">
+
+                                    <picture class="team-member__img">
+                                    
+                                        <source srcset="./images/our-projects/prj-website-noborders_450x294@1x.jpg 450w,
+                                                                      ./images/our-projects/prj-website-noborders_450x294@2x.jpg 900w"
+                                            sizes="(max-width: 767px) 450px, 100vw" media="(max-width: 767px)">
+                                    
+                                        <source srcset="./images/our-projects/prj-website-noborders_354x294@1x.jpg 350w,
+                                                                    ./images/our-projects/prj-website-noborders_354x294@2x.jpg 700w"
+                                            sizes="(max-width: 1199px) 354px, 50vw" media="(max-width: 1199px)">
+                                    
+                                        <source srcset="./images/our-projects/prj-website-noborders_370x294@1x.jpg 370w,
+                                                                      ./images/our-projects/prj-website-noborders_370x294@2x.jpg 740w"
+                                            sizes="(min-width: 1200px) 370px, 25vw" media="(min-width: 1200px)">
+                                    
+                                        <img src="./images/our-projects/prj-website-noborders_370x294.jpg" alt="Страница сайта Inspiration has no Borders"
+                                            class="project-image" />
+                                    </picture>
+                                     
                                 <div class="thumb__box">
                                     <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить
@@ -161,7 +309,24 @@
                         <li class="works__item">
                             <a href="" class="works__link">
                                 <div class="thumb__card">
-                                <img class="thumb__images" src="./images/img07.jpg" alt="Журнал" width="370" height="294">
+                            <picture class="team-member__img">
+
+                            <source srcset="./images/our-projects/prj-limited-edition_450x294@1x.jpg 450w,
+                                            ./images/our-projects/prj-limited-edition_450x294@2x.jpg 900w"
+                                sizes="(max-width: 767px) 450px, 100vw" media="(max-width: 767px)">
+
+                            <source srcset="./images/our-projects/prj-limited-edition_354x294@1x.jpg 350w,
+                                            ./images/our-projects/prj-limited-edition_354x294@2x.jpg 700w"
+                                sizes="(max-width: 1199px) 354px, 50vw" media="(max-width: 1199px)">
+
+                            <source srcset="./images/our-projects/prj-limited-edition_370x294@1x.jpg 370w,
+                                            ./images/our-projects/prj-limited-edition_370x294@2x.jpg 740w"
+                                sizes="(min-width: 1200px) 370px, 25vw" media="(min-width: 1200px)">
+
+                            <img src="./images/our-projects/prj-limited-edition_370x294.jpg"
+                                alt="Разворот журнала Limited Edition" class="project-image" />
+                            </picture>
+
                                 <div class="thumb__box">
                                     <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить
@@ -177,8 +342,19 @@
                         <li class="works__item">
                             <a href="" class="works__link">
                                 <div class="thumb__card">
-                                <img class="thumb__images" src="./images/img08.jpg" alt="Бирка" width="370" height="294">
-                                <div class="thumb__box">
+
+                                    <picture class="team-member__img">
+                                        <source srcset="./images/our-projects/prj-label-tag_450x294@1x.jpg 450w, ./images/our-projects/prj-label-tag_450x294@2x.jpg 900w"
+                                            sizes="(max-width: 767px) 450px, 100vw" media="(max-width: 767px)">
+                                        <source srcset="./images/our-projects/prj-label-tag_354x294@1x.jpg 350w, ./images/our-projects/prj-label-tag_354x294@2x.jpg 700w"
+                                            sizes="(max-width: 1199px) 354px, 50vw" media="(max-width: 1199px)">
+                                        <source srcset="./images/our-projects/prj-label-tag_370x294@1x.jpg 370w, ./images/our-projects/prj-label-tag_370x294@2x.jpg 740w"
+                                            sizes="(min-width: 1200px) 370px, 25vw" media="(min-width: 1200px)">
+                                    
+                                        <img src="./images/our-projects/prj-label-tag_370x294.jpg" alt="Название бренда LAB на лейбле"
+                                            class="project-image" />
+                                    </picture>
+                               <div class="thumb__box">
                                     <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить
                                         исчерпывающие сведения о компании или частном лице.</p>
@@ -193,8 +369,24 @@
                         <li class="works__item">
                             <a href="" class="works__link">
                                 <div class="thumb__card">
-                                <img class="thumb__images" src="./images/img09.jpg" alt="Сотрудник печатает на ноутбуке"
-                                    width="370" height="294">
+                                        <picture class="team-member__img">
+                                        
+                                            <source srcset="./images/our-projects/prj-growing-business_450x294@1x.jpg 450w,
+                                                                          ./images/our-projects/prj-growing-business_450x294@2x.jpg 900w"
+                                                sizes="(max-width: 767px) 450px, 100vw" media="(max-width: 767px)">
+                                        
+                                            <source srcset="./images/our-projects/prj-growing-business_354x294@1x.jpg 350w,
+                                                                        ./images/our-projects/prj-growing-business_354x294@2x.jpg 700w"
+                                                sizes="(max-width: 1199px) 354px, 50vw" media="(max-width: 1199px)">
+                                        
+                                            <source srcset="./images/our-projects/prj-growing-business_370x294@1x.jpg 370w,
+                                                                          ./images/our-projects/prj-growing-business_370x294@2x.jpg 740w"
+                                                sizes="(min-width: 1200px) 370px, 25vw" media="(min-width: 1200px)">
+                                        
+                                            <img src="./images/our-projects/prj-growing-business_370x294.jpg" alt="Страница приложения Growing Business"
+                                                class="project-image" />
+                                        </picture>
+
                                     <div class="thumb__box">
                                         <p class="thumb__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                             позволит посетителю получить
@@ -212,54 +404,56 @@
             </div>
         </section>
     </main>
-    <!--Footer-->
     <footer class="footer">
         <div class="container">
-            <div class="address__box">
-                <a class="footer__logo logo" href="./index.html">Web<span class="footer__logo--white">Studio</span></a>
-                <address class="address">
-                    <ul class="address__list">
-                        <li class="address__item"><a class="address__text" href="">г. Киев, пр-т Леси Украинки, 26</a></li>
-                        <li class="address__item"><a class="address__item"
-                                href="mailto:info@devstudio.com">info@devstudio.com</a>
+            <div class="container--flex">
+                <div class="address__box footer__top">
+                    <a class="footer__logo logo" href="./index.html">Web<span class="footer__logo--white">Studio</span></a>
+                    <address class="address">
+                        <ul class="address__list">
+                            <li class="address__item"><a class="address__text" href="">г. Киев, пр-т Леси Украинки, 26</a>
+                            </li>
+                            <li class="address__item"><a class="address__item"
+                                    href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                            <li class="address__item"><a class="address__item" href="tel:+380961111111">+38 096 111 11
+                                    11</a></li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="footer__wrapper footer__top">
+                    <p class="footer__text">присоединяйтесь</p>
+                    <ul class="footer-icon__list">
+                        <li class="footer-icon__item">
+                            <a href="" class="footer-icon__link">
+                                <svg class="icon__social" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#instagram-icon"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="address__item"><a class="address__item" href="tel:+380961111111">+38 096 111 11 11</a>
+                        <li class="footer-icon__item">
+                            <a href="" class="footer-icon__link">
+                                <svg class="icon__social" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#twitter-icon"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-icon__item">
+                            <a href="" class="footer-icon__link">
+                                <svg class="icon__social" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#facebook-icon"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-icon__item">
+                            <a href="" class="footer-icon__link">
+                                <svg class="icon__social" width="20" height="20">
+                                    <use href="./images/symbol-defs.svg#linkedin-icon"></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
-                </address>
-            </div>
-            <div class="footer__wrapper">
-                <p class="footer__text">присоединяйтесь</p>
-                <ul class="footer-icon__list">
-                    <li class="footer-icon__item">
-                        <a href="" class="footer-icon__link">
-                            <svg class="icon__social" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#instagram-icon"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-icon__item">
-                        <a href="" class="footer-icon__link">
-                            <svg class="icon__social" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#twitter-icon"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-icon__item">
-                        <a href="" class="footer-icon__link">
-                            <svg class="icon__social" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#facebook-icon"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-icon__item">
-                        <a href="" class="footer-icon__link">
-                            <svg class="icon__social" width="20" height="20">
-                                <use href="./images/symbol-defs.svg#linkedin-icon"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
             <!--Footer-block-->
             <div class="subcribe">
@@ -274,7 +468,7 @@
                     </button>
                 </form>
             </div>
-            </div>
+        </div>
     </footer>
     <script src="./js/mobile-menu.js"></script>
 </body>

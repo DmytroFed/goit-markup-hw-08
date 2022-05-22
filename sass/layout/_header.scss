@@ -16,6 +16,9 @@
 }
 .nav {
     @extend %align-items;
+    @media screen and (max-width: 480px) {
+                max-width: 480px;
+    }
 }
 
 .nav__list {
@@ -135,7 +138,6 @@
 .mobile-menu {
     display: none;
     position: fixed;
-
     top: 0;
     background-color: var(--main-color);
     height: 100%;
@@ -143,9 +145,10 @@
     z-index: 5;
     
     &.is-hidden {
-        display: block;
+         display: block;
     }
 }
+
 .mobile-menu__container {
     display: flex;
     flex-direction: column;
@@ -156,7 +159,7 @@
 
 .mobile-menu__top {
     display: block;
-    //margin-bottom: 302px;
+
 }
 .mobile-menu__bottom {
     margin-left: 40px;
@@ -247,7 +250,9 @@
     @include font (18px, 500, 1.22, 0.02em);
     color: var(--accent-color);
 }
-
+.no-scroll {
+    overflow: hidden;
+}
   
 
 
