@@ -1012,14 +1012,22 @@ a {
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 0;
   background-color: var(--main-color);
+  top: 0;
   height: 100%;
   width: 100%;
   z-index: 5;
+  /*@media screen and (max-width: 767px) {
+      display: none;
+  }*/
 }
 .mobile-menu.is-hidden {
   display: block;
+}
+@media screen and (min-width: 767px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .mobile-menu__container {
@@ -1383,6 +1391,9 @@ a {
   background-color: var(--main-color);
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .team__item {

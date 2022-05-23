@@ -138,14 +138,22 @@
 .mobile-menu {
     display: none;
     position: fixed;
-    top: 0;
     background-color: var(--main-color);
+    top: 0;
     height: 100%;
     width: 100%;
     z-index: 5;
-    
+
+     /*@media screen and (max-width: 767px) {
+        display: none;
+    }*/
+ 
     &.is-hidden {
-         display: block;
+        display: block;
+    }
+
+     @media screen and (min-width: 767px) {
+        display: none;
     }
 }
 

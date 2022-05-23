@@ -19,6 +19,7 @@
     border-radius: 0 0 4px 4px;
     background-color: var(--main-color);
     box-shadow: var(--box-shadow);
+    justify-content: center;
     
     @media screen and (min-width: 768px) {
      @include flex-item(calc(100% / 2 - var(--set-gap)));
@@ -26,7 +27,7 @@
 
     @media screen and (min-width: 1200px) {
       @include flex-item(calc(100% / 4 - var(--set-gap)));;
-    }
+    } 
 
     &:not(:last-child) {
         @media screen and (max-width: 767px) {
