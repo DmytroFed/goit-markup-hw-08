@@ -69,6 +69,7 @@
 }
         @media screen and (min-width: 768px) {
             flex-basis: calc((100% - 4 * 15px) / 2);
+            height: 440px;
         }
     
         @media screen and (min-width: 1200px) {
@@ -87,7 +88,9 @@
 }
 
 .works__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     text-decoration: none;
     color: var(---primary-text-color);
 
@@ -117,7 +120,9 @@
     padding: 20px 24px;
     border: 1px solid var(--border-color);
     text-decoration: none;
+    flex-grow: 1;
 }
+
 
 .exemple__item {
     padding: 0;

@@ -391,6 +391,14 @@ a {
     letter-spacing: 0.06em;
   }
 }
+@media screen and (min-width: 768px) {
+  .hero__text {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero__text {
     font-size: 44px;
@@ -1154,7 +1162,7 @@ a {
 }
 
 .hero {
-  min-width: 480px;
+  min-width: 320px;
   max-width: 1600px;
   padding: 118px 0;
   margin: 0;
@@ -1163,7 +1171,6 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
   background-color: var(--fond-color);
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-our-company_480x400@1x.jpg);
   background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-our-company_480x400@1x.jpg);
@@ -1176,8 +1183,8 @@ a {
 }
 @media screen and (min-width: 480px) {
   .hero {
-    min-width: 480px;
-    max-width: 768px;
+    min-width: 468px;
+    max-width: 1200px;
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-our-company_768x400@1x.jpg);
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-our-company_768x400@1x.jpg);
   }
@@ -1188,18 +1195,19 @@ a {
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-our-company_768x400@2x.jpg);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .hero {
     margin: 0;
     min-width: 1200px;
     max-width: 100%;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-size: 1600px;
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-our-company_1600x600@1x.jpg);
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-our-company_1600x600@1x.jpg);
   }
 }
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-our-company_1600x600@2x.jpg);
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-our-company_1600x600@2x.jpg);
@@ -1207,6 +1215,10 @@ a {
 }
 
 .hero__box {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 360px;
   text-align: center;
   margin: 0;
@@ -1216,6 +1228,13 @@ a {
 @media screen and (min-width: 320px) {
   .hero__box {
     max-width: 360px;
+  }
+}
+@media screen and (min-width: 780px) {
+  .hero__box {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1939,6 +1958,7 @@ a {
   .works__item {
     -ms-flex-preferred-size: calc((100% - 60px) / 2);
         flex-basis: calc((100% - 60px) / 2);
+    height: 440px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1954,7 +1974,14 @@ a {
 }
 
 .works__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   text-decoration: none;
   color: var(---primary-text-color);
   -webkit-transition-property: -webkit-box-shadow, -webkit-transform;
@@ -1989,6 +2016,9 @@ a {
   padding: 20px 24px;
   border: 1px solid var(--border-color);
   text-decoration: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .exemple__item {
