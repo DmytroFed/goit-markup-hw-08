@@ -1,24 +1,44 @@
 .portfolio {
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 40px; 
+    //padding-bottom: 60px;
+    @media screen and (min-width: 780px) {
+            padding-bottom: 60px;
+        }
+    @media screen and (min-width: 1200px) {
+            padding-bottom: 94px;
+        }
+   
 }
 
 .filter {
-    display: block;
+     display: block;
+        margin-bottom: 40px;
+    @media screen and (min-width: 780px) {
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+        }
 }
 
 .filter__list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 15px;
-    //margin-bottom: 50px;
     @media screen and (min-width: 750px) {
-        justify-content: center;
-        }
+     justify-content: center;
+      }
+
+
+
 }
 
 .filter__item+.filter__item {
     margin-bottom: 15px;
+        @media screen and (min-width: 750px) {
+                margin-bottom: 0;
+            }
 }
 
 .filter__item:not(:last-child) {
@@ -28,7 +48,16 @@
 
 /* Фильтр портфолио */
 .works {
+    margin-top: 40px;
     margin: -15px;
+        @media screen and (min-width: 780px) {
+                margin-top: 30px;
+                padding-bottom: 0;
+            }
+        
+            @media screen and (min-width: 1200px) {
+                margin-top: 50px;
+            }
     transition-property: box-shadow, transform;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
@@ -37,21 +66,19 @@
 .works__cards-list {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 0;
-    margin-top: 0;
+    margin: -15px;
+            @media screen and (min-width: 780px) {
+                    margin-top: 0;
+                    padding-bottom: 0;
+                }
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+
     @media screen and (max-width: 480px) {
          justify-content: center;
     }
-     @media screen and (min-width: 780px) {
-         padding-top: 30px;
-    }
-    @media screen and (min-width: 1200px) {
-         padding-top: 50px;
-         padding-bottom: 94px;
-      }
+
 }
 
 .works__item {
@@ -78,13 +105,9 @@
     
         &:not(:last-child) {
             @media screen and (max-width: 767px) {
-                margin-bottom: 30px;
+                margin-bottom: 15px;
             }
         }
-    /* АЛЬТЕРНАТИВА */
-    /*width: calc((100% - 2 * 30px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;*/
 }
 
 .works__link {
@@ -144,6 +167,7 @@
     width: 100%;
     height: 100%;
     padding: 64px 24px;
+    overflow-y: scroll;
     background: var(--portfolio-overlay-color);
     transform: translateY(150%);
 

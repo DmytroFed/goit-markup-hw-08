@@ -1,6 +1,11 @@
 .team {
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
     background-color: var(--team-fond-color);
 }
 //ul
@@ -10,30 +15,31 @@
     margin: -15px;  
     @media screen and (min-width: 480px) {
             @include flex-list;
+            margin: -15px;
         }
       
 }
 //li
 .team__item {
-    margin: 0;
+    margin: 15px;
     border-radius: 0 0 4px 4px;
     background-color: var(--main-color);
     box-shadow: var(--box-shadow);
     justify-content: center;
     
     @media screen and (min-width: 768px) {
-     @include flex-item(calc(100% / 2 - var(--set-gap)));
+        flex-basis: calc((100% - 15px * 4)/2);
     }
 
     @media screen and (min-width: 1200px) {
-      @include flex-item(calc(100% / 4 - var(--set-gap)));;
-    } 
-
-    &:not(:last-child) {
-        @media screen and (max-width: 767px) {
-        margin-bottom: 30px;
-    }  
- }
+        flex-wrap: nowrap;
+        flex-basis: calc((100% - 15px * 8)/4);
+    }    
+        &:not(:last-child) {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 15px;
+            }
+        }
 }
 .team-picture {
     margin-top: 0;

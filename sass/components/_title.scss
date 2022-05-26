@@ -21,6 +21,9 @@
     display: block;
     margin-bottom: 12px;
     @include font (20px, 700, 1.15, 0.03em);
+    @media screen and (min-width: 1200px) {
+        @include font (none, none, 1.5, none);
+    }
 
     text-align: center;
     color: var(--primary-text-color);

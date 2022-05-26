@@ -4,11 +4,11 @@
     @extend %align-items;
     text-decoration: none;
     color: var(--secondary-text-color);
-    @include font (14px, 500, 1.14, 0.03em);
+    //@include font (14px, 500, 1.14, 0.03em);
 @media screen and (min-width: 768px) {
         justify-content: center;
     }
-        transition-property: color;
+    transition-property: color;
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
 
@@ -20,12 +20,36 @@
     }
 
     &--env:hover,
-    &--tel:hover {
+    &--tel:hover,
+    &--env:focus,
+    &--tel:focus {
         color: var(--accent-color);
     }
 }
-.contacts-header__link--env {
-    margin-bottom: 10px;
-}
+.contacts-header__link--env,
+.contacts-header__link--tel {
+    @include font (12px, 500, 1.17, 0.02em);
 
+    @media screen and (min-width: 1200px) {
+            @include font (14px, 500, 1.17, 0.02em);
+            padding-top: 0;
+        }
+}
+.contacts-header__link--env {
+    padding-top: 21px;
+    margin-bottom: 10px;
+    @media screen and (min-width: 1200px) {
+        @include font (14px, 500, 1.17, 0.02em);
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+}
+.contacts-header__link--tel {
+    padding-bottom: 21px;
+    @media screen and (min-width: 1200px) {
+        @include font (14px, 500, 1.17, 0.02em);
+            padding-top: 32px;
+            padding-bottom: 32px;;
+        }
+}
 
