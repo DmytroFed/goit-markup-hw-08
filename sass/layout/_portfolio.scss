@@ -1,6 +1,6 @@
 .portfolio {
     padding-top: 40px; 
-    //padding-bottom: 60px;
+    padding-bottom: 60px;
     @media screen and (min-width: 780px) {
             padding-bottom: 60px;
         }
@@ -67,10 +67,11 @@
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
-            @media screen and (min-width: 780px) {
-                    margin-top: 0;
-                    padding-bottom: 0;
-                }
+
+    @media screen and (min-width: 780px) {
+             margin-top: 0;
+            padding-bottom: 0;
+        }
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -78,7 +79,6 @@
     @media screen and (max-width: 480px) {
          justify-content: center;
     }
-
 }
 
 .works__item {

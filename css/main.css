@@ -1105,9 +1105,6 @@ a {
   height: 100%;
   width: 100%;
   z-index: 5;
-  opacity: 1;
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (max-width: 767px) {
   .mobile-menu {
@@ -1966,6 +1963,7 @@ a {
 
 .portfolio {
   padding-top: 40px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 780px) {
   .portfolio {

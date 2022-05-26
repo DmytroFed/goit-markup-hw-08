@@ -122,9 +122,6 @@
     width: 100%;
     z-index: 5;
 
-    opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
     @media screen and (max-width: 767px) {
             display: none;
      
