@@ -121,13 +121,13 @@
     height: 100%;
     width: 100%;
     z-index: 5;
-
+   
     @media screen and (max-width: 767px) {
             display: none;
      
         &.is-hidden {
         display: block;
-        }
+            }
     }
     
 }    
