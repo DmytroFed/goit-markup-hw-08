@@ -2,6 +2,9 @@
     padding: 60px 0;
     margin-left: auto;
     margin-right: auto;
+    @media screen and (min-width: 1200px) {
+            padding: 94px 0;
+        }
    
 }
 
@@ -54,9 +57,7 @@
     border-radius: 4px;
     }
 }
-.advantage__item.astronaut {
-    margin-bottom: 0;
-}
+
 .antenna::before {
     background-image: url(../images/antenna.svg);
 }

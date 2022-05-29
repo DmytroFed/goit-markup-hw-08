@@ -183,7 +183,6 @@ a {
 
 .contacts-header__link--env {
   padding-top: 21px;
-  margin-bottom: 10px;
 }
 @media screen and (min-width: 1200px) {
   .contacts-header__link--env {
@@ -358,8 +357,8 @@ a {
 }
 
 .menu-close__btn {
-  padding: 1rem;
   position: absolute;
+  fill: var(--primary-text-color);
   right: 15px;
   top: 10px;
   background-color: transparent;
@@ -367,7 +366,12 @@ a {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-close__btn:hover, .menu-close__btn:focus {
+
+.icon__menu--open:hover, .icon__menu--open:focus {
+  fill: var(--accent-color);
+}
+
+.icon__menu--close:hover, .icon__menu--close:focus {
   fill: var(--accent-color);
 }
 
@@ -1085,6 +1089,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .contacts-header__item {
+    margin-bottom: 10px;
+  }
+}
 .contacts-header__item:hover, .contacts-header__item:focus {
   color: var(--accent-color);
 }
@@ -1105,6 +1114,7 @@ a {
   height: 100%;
   width: 100%;
   z-index: 5;
+  overflow: auto;
 }
 @media screen and (max-width: 767px) {
   .mobile-menu {
@@ -1252,9 +1262,9 @@ a {
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-our-company_768x400@2x.jpg);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .hero {
-    max-width: 100%;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background-size: cover;
@@ -1263,7 +1273,7 @@ a {
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-our-company_1600x600@1x.jpg);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-our-company_1600x600@2x.jpg);
     background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-our-company_1600x600@2x.jpg);
@@ -1296,6 +1306,11 @@ a {
   padding: 60px 0;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .advantages__page {
+    padding: 94px 0;
+  }
 }
 
 .advantage__list {
@@ -1348,10 +1363,6 @@ a {
   background-repeat: no-repeat;
   margin-bottom: 30px;
   border-radius: 4px;
-}
-
-.advantage__item.astronaut {
-  margin-bottom: 0;
 }
 
 .antenna::before {
@@ -1766,6 +1777,7 @@ a {
 @media screen and (min-width: 1200px) {
   .footer__wrapper {
     margin-left: 70px;
+    text-align: left;
   }
 }
 
@@ -1779,7 +1791,10 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .footer-icon__list {
-    margin-bottom: 60px;
+    padding-left: 0;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
   }
 }
 

@@ -96,7 +96,9 @@
 .contacts-header__item {
     display: block;
     align-items: center;
-
+    @media screen and (min-width: 768px) {
+           margin-bottom: 10px;
+        }
     &:hover,
     &:focus {
         color: var(--accent-color);
@@ -121,19 +123,23 @@
     height: 100%;
     width: 100%;
     z-index: 5;
-   
-    @media screen and (max-width: 767px) {
+    overflow: auto;
+    opacity: 1;
+    transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    
+        @media screen and (max-width: 767px) {
             display: none;
      
         &.is-hidden {
         display: block;
-            }
+        opacity: 0;
+        pointer-events: none;
+        }
     }
     
+        
 }    
-
-
-
 
 //TEST  2строки
     /*transform: translate(100%, 0);
@@ -147,8 +153,6 @@
     justify-content: space-between;
     overflow: auto;
     padding: 48px 40px;
-
-
 }
 
 .mobile-menu__top {
