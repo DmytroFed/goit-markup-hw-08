@@ -33,6 +33,7 @@
     @media screen and (min-width: 1200px) {
             @include font (14px, 500, 1.17, 0.02em);
             padding-top: 0;
+            margin-bottom: 0;
         }
 }
 .contacts-header__link--env {
