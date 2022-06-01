@@ -38,6 +38,7 @@
     transform: translate(-50%, -50%) scale(1);
     transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--main-color);
+
 .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(1.5);
     }
@@ -61,17 +62,33 @@
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-icon {
-    .backdrop__btn & {
-        width: 11px;
-        height: 11px;
-        fill: var(--text-color);
-        transition-property: transform, background-color;
-        transition-duration: var(--transition-duration);
-        transition-timing-function: var(--transition-timing-function);
-    }
+.backdrop__btn {
+       transition: box-shadow 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
         fill: var(--accent-color);
     }
 }
+
+.close-icon {
+    .backdrop__btn & {
+        width: 11px;
+        height: 11px;
+        fill: var(--text-color);
+        transition-property: transform, fill, border;
+        transition-duration: var(--transition-duration);
+        transition-timing-function: var(--transition-timing-function);
+    }
+    &:hover,
+    &:focus {
+       fill: var(--accent-color);
+        
+    }
+}
+/*.backdrop__btn {
+    &:hover,
+    &:focus {
+        border: 1px solid var(--text-color);
+    }
+}*/

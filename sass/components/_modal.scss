@@ -100,7 +100,7 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: none;
-    transform: scale(1);
+    transform: border-color, scale(1);
     transition-duration: var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
     &:hover,
